@@ -1,3 +1,5 @@
+# Rust Learning App
+
 This project is an interactive learning application designed for mobile devices, created for the purpose of learning the Rust programming language. The educational content presented in the app is directly based upon the material available in the Rust Book repository.
 
 ## Android
