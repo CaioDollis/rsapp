@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Rust Book App</string>
+    <string name="title_activity_main">Rust Book App</string>
+    <string name="package_name">com.rsapp.rustbook</string>
+    <string name="custom_url_scheme">com.rsapp.rustbook</string>
+</resources>

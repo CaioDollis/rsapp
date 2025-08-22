@@ -12,12 +12,26 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "android": "npm run build && npx cap sync android"
+    "android": "npm run build && npx cap sync android",
+    "android:sync": "npx cap sync android",
+    "android:open": "npx cap open android"
   },
   "devDependencies": {
     "@capacitor/cli": "^7.4.3",
-    "@types/react": "^19.1.10",
-    "@types/react-dom": "^19.1.7",
-    "typescript": "^5.9.2"
+    "@types/react": "^18.2.47",
+    "@types/react-dom": "^18.2.18",
+    "typescript": "^4.9.5"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }
