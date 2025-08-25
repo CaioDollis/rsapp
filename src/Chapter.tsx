@@ -6,10 +6,10 @@ import Quiz from "./Quiz";
 interface ChapterProps {
   chapterFile: string;
 }
-interface ChapterElement {
-  kind: "text" | "code" | "quiz";
-  content: any;
-}
+type ChapterElement =
+  | { kind: "text"; content: string }
+  | { kind: "code"; content: { language?: string; flags?: string[]; code: string } }
+  | { kind: "quiz"; content: { questions: any[] } };
 const Chapter: React.FC<ChapterProps> = ({ chapterFile }) => {
   const { book } = useContext(BookContext);
   const chapter = book.chapters.find(
@@ -38,7 +38,7 @@ const Chapter: React.FC<ChapterProps> = ({ chapterFile }) => {
       </div>
     );
 
-  const element: ChapterElement = chapter.elements[index];
+  const element = chapter.elements[index] as ChapterElement | undefined;
   const next = () => setIndex(Math.min(index + 1, chapter.elements.length - 1));
   const prev = () => setIndex(Math.max(index - 1, 0));
 
